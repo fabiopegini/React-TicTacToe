@@ -1,0 +1,114 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #306b34;
+  color: #f3ffc6;
+  text-shadow: 2px 4px black;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: #f3ffc6;
+  color: #1c5253;
+}
+
+#root {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#turn {
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 150px;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #1c5253;
+  border-radius: 4px;
+  text-shadow: 1px 1px black;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 16px;
+  font-size: 4rem;
+}
+
+.cell {
+  outline: 2px solid #1c5253;
+  border: 16px solid white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3ffc6;
+  box-shadow: 4px 4px 0 0 black;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background-color: #306b3477;
+}
+
+.cell:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 2px 0 0 black;
+}
+
+#win,
+#draw {
+  height: 100%;
+  width: 100%;
+  background-color: #9f83b3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+
+#win > button,
+#draw > button {
+  margin-top: 2rem;
+  color: white;
+  font-size: 2rem;
+  background-color: #306b34;
+  box-shadow: 2px 4px 0 0 black;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+#win > button:hover,
+#draw > button:hover {
+  background-color: #306b34;
+  cursor: pointer;
+}
+
+#win > button:active,
+#draw > button:active {
+  transform: translate(1px, 3px);
+  box-shadow: 1px 1px 0 0 black;
+}
